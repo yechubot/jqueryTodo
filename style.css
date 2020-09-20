@@ -1,0 +1,45 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+#todo {
+    margin: 50px auto;
+    padding-top: 10px;
+    width: 500px;
+    height: 500px;
+    
+    background-color: antiquewhite;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+#inputBox {
+    margin: 20px 68px;
+    display: block;
+}
+.add,.btn {
+    height:40px;
+    border: 3px solid pink;
+    outline: none;
+    font-size: 1.2rem;
+    text-align: center;
+
+}
+.add {
+    width:300px;
+}
+
+.btn {
+    width:50px;
+    height:45px;
+    background: pink;
+    display: inline-block;
+}
+
+ul {
+    padding:50px 50px;
+    font-size: 1.2rem;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bullet To Do</title>
+    <link href= "style.css" rel = "stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script>
+       $(document).ready(function() {
+           $('.btn').click(function() {
+
+             //max is the 10, can not be added more than 10
+             if($('li').length>=10){
+                   alert("too many todos! 10 is the maximum");
+                   $('ul').remove($('<li>'+todoWritten+'</li>'));
+               } 
+               // add todo when click the btn
+               const todoWritten = $('.add').val();
+               //add list only when input is not blank
+               if(todoWritten.length!=0){
+               $('ul').append($('<li>'+todoWritten+'</li>'));
+               }
+            
+            $('li').hover(
+                function(){
+                    $('li').css({
+                    textDecoration:'strikethrough',
+                    color: 'pink'
+                });
+            }, function() {
+                $
+            });
+           })
+       })
+   </script>
+</head>
+<body>
+    <div id = todo>
+        <h1> Your Bullet To Do</h1>
+    <div id = inputBox>
+        <input class="add" type = "text" placeholder="write your todo"/>
+        <button class ="btn">add</button>
+    </div>
+        <ul>
+            <li>coding practice</li>
+            <li>groceries</li>
+            <li>english study</li>
+        </ul>
+    </div>
+</body>
+</html>
