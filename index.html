@@ -22,17 +22,36 @@
                if(todoWritten.length!=0){
                $('ul').append($('<li>'+todoWritten+'</li>'));
                }
-            
+           }).css('cursor','pointer');
+
             $('li').hover(
                 function(){
-                    $('li').css({
-                    textDecoration:'strikethrough',
-                    color: 'pink'
+                    let index = $(this).index();
+                    $(this).css({
+                    color: 'pink',
+                    cursor:'pointer'
                 });
             }, function() {
-                $
+                $(this).css({
+                    color:'black',
+                });
             });
-           })
+            let clicked = false;
+            $('li').click(function(){
+                if(clicked){
+                let index = $(this).index();
+                $(this).css({
+                    color:'pink',
+                    textDecoration:'line-through'
+                })
+                }else {
+                    $(this).css({
+                    color:'pink',
+                    textDecoration:'none'
+                })
+                }
+            })
+           
        })
    </script>
 </head>
