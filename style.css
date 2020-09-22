@@ -1,14 +1,14 @@
 *{
     margin:0;
     padding:0;
-
+    font-family: monospace;
 }
 #todo {
     margin: 50px auto;
     padding-top: 10px;
     width: 500px;
     height: 500px;
-    
+    border-radius: 2em;
     background-color: antiquewhite;
     font-family: 'Noto Sans', sans-serif;
 }
@@ -24,7 +24,7 @@ h1{
     height:40px;
     border: 3px solid pink;
     outline: none;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-align: center;
 
 }
@@ -41,5 +41,11 @@ h1{
 
 ul {
     padding:50px 50px;
-    font-size: 1.2rem;
+    font-size: 1.7rem;
 }
+
+li:hover {
+    background: pink;
+    cursor: pointer;
+}
+
