@@ -12,7 +12,7 @@
            
         $('#inputBox').on('click','.btn',function(){
                 //max is 10
-            if($('li').length>10){
+            if($('li').length>=10){
                 alert("too many todos! 10 is the maximum");
                 $(this).off();
              } else {
@@ -25,19 +25,18 @@
            }).css('cursor','pointer');
             
            //click to strikethrough
-            let clicked = false;
-            $('li').click(function(){
-                clicked = true;
+           let clicked = true;
+            $('#lists').on('click','li', function(){
                 if(clicked){
-                let index = $(this).index();
-                $(this).css({
-                    textDecoration:'line-through'
-                })
-                }else{
-               return clicked;
-                }
-            })
-            //click again to undo
+                $(this).css('textDecoration','line-through');
+                clicked = false;
+                //click again to undo
+            } else {
+                $(this).css('textDecoration','overline');
+                clicked = true;
+
+        }
+     }) 
 })
 
    </script>
@@ -52,7 +51,6 @@
         <ul id = "lists">
             <li>coding practice</li>
             <li>groceries</li>
-            <li>english study</li>
         </ul>
     </div>
 </body>
